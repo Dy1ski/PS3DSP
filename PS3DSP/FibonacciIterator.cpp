@@ -11,10 +11,13 @@ class FibonacciIterator
 
 	const long & FibonacciIterator::operator*() const
 	{
-		for (i = 0; i < fMaxN; i++)
+		for (int i = 1; i < fMaxN; i++)
 		{
-			fCurrent
+			fCurrent = fCurrentN + fPrevious;
+			fPrevious = fCurrent;
+			fCurrentN = fCurrent;
 		}
+		return fCurrent;
 	}
 	FibonacciIterator& FibonacciIterator:: operator++()
 	{
