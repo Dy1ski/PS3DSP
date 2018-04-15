@@ -3,7 +3,7 @@ class FibonacciIterator
 {
 	FibonacciIterator::FibonacciIterator(long aMaxN)
 	{
-		fMaxN = 20;
+		fMaxN = aMaxN;
 		fCurrentN = 1;
 		fPrevious = 0;
 		fCurrent = 0; // these may need to be changed
