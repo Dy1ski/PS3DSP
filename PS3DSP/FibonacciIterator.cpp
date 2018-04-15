@@ -3,7 +3,7 @@ class FibonacciIterator
 {
 	FibonacciIterator::FibonacciIterator(long aMaxN)
 	{
-		fMaxN = n;
+		fMaxN = 20;
 		fCurrentN = 1;
 		fPrevious = 0;
 		fCurrent = 0; // these may need to be changed
@@ -11,16 +11,19 @@ class FibonacciIterator
 
 	const long & FibonacciIterator::operator*() const
 	{
-		// TODO: insert return statement here
+		for (i = 0; i < fMaxN; i++)
+		{
+			
+		}
 	}
 	FibonacciIterator& FibonacciIterator:: operator++()
 	{
-		fCurrent++;
+		fCurrentN++;
 	}
 	FibonacciIterator::FibonacciIterator operator++(int)
 	{
 		FibonacciIterator temp = *this;
-		fCurrent++;
+		fCurrentN++;
 		return temp;
 	}
 	bool FibonacciIterator::operator==(const FibonacciIterator& aOther) const 
@@ -35,7 +38,7 @@ class FibonacciIterator
 
 	FibonacciIterator::FibonacciIterator begin() const
 	{
-	
+		
 	}
 	FibonacciIterator::FibonacciIterator end() const
 	{
